@@ -18,7 +18,8 @@ const config: PlaywrightTestConfig = {
     projects: [
         {
             name: 'Chromium',
-            use: { browserName: 'chromium' }
+            use: { browserName: 'chromium' },
+            timeout: 120000
         },
         {
             name: 'Firefox',

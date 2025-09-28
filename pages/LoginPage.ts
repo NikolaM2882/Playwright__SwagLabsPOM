@@ -32,7 +32,9 @@ async inputPassword(password : string){
 }
 
 async clickOnLoginButton(){
+    await this.loginButton.waitFor({ state: 'visible', timeout: 10000 }) // wait up to 10s
     await this.loginButton.click()
+
 }
 
 
