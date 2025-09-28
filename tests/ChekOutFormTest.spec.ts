@@ -39,7 +39,7 @@ test.describe('Checkout Form functionality', () => {
           await checkOutFormPage.continueButton.click()
 
           await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-two.html')
-          await expect(overviewPage.finishButton).toBeVisible
+          await expect(overviewPage.finishButton).toBeVisible()
 
 
 
@@ -71,7 +71,7 @@ test.describe('Checkout Form functionality', () => {
 
 
     ////3
-    test.only('User isnt able to submit Checkout form with blank firstname', async ({page}) => {
+    test('User isnt able to submit Checkout form with blank firstname', async ({page}) => {
 
     await loginPage.inputUsername('standard_user')
     await loginPage.inputPassword('secret_sauce')
@@ -98,7 +98,7 @@ test.describe('Checkout Form functionality', () => {
     })
 
     ///4
-    test.only('User isnt able to submit Checkout form with blank lastname', async ({page}) => {
+    test('User isnt able to submit Checkout form with blank lastname', async ({page}) => {
 
     await loginPage.inputUsername('standard_user')
     await loginPage.inputPassword('secret_sauce')
@@ -125,7 +125,7 @@ test.describe('Checkout Form functionality', () => {
     })
 
     ///5
-    test.only('User isnt able to submit Checkout form with blank zipcode', async ({page}) => {
+    test('User isnt able to submit Checkout form with blank zipcode', async ({page}) => {
 
     await loginPage.inputUsername('standard_user')
     await loginPage.inputPassword('secret_sauce')
